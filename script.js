@@ -12,8 +12,7 @@ let sound_point = new Audio('sounds effect/point.mp3');
 let sound_die = new Audio('sounds effect/die.mp3');
 let sound_jump = new Audio('sounds effect/jump.mp3');
 let sound_start = new Audio('sounds effect/start.mp3');
-//current
-let currentCharacter = 1;
+
 
 // Properti posisi dan ukuran burung
 let bird_props = bird.getBoundingClientRect(); 
@@ -39,19 +38,6 @@ img.style.display = 'none';
 message.classList.add('messageStyle');
 start.classList.add('start')
 exit.classList.add('exit')
-
-//Switch
-document.getElementById("switch").addEventListener("click", () => {
-  if (currentCharacter === 1) {
-    currentCharacter = 2;
-    document.getElementById("bird-1").style.display = "none";
-    document.getElementById("chuck").style.display = "block";
-  } else {
-    currentCharacter = 1;
-    document.getElementById("bird-1").style.display = "block";
-    document.getElementById("chuck").style.display = "none";
-  }
-});
 
 // Tombol Start
 start.addEventListener('click', (e) => {
